@@ -1,0 +1,364 @@
+<!DOCTYPE html><html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080b08">
+<title>EZPRO MAIL ⚡</title><script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script><link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"><style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+:root{
+--green:#b8ff36;
+--bg:#080b08;
+--card:rgba(255,255,255,.045);
+--border:rgba(184,255,54,.15);
+}
+
+body{
+background:var(--bg);
+color:white;
+font-family:Vazirmatn,sans-serif;
+min-height:100vh;
+overflow-x:hidden;
+}
+
+body:before{
+content:"";
+position:fixed;
+width:400px;height:400px;
+background:#8cff0017;
+filter:blur(110px);
+top:-150px;right:-100px;
+pointer-events:none;
+}
+
+body:after{
+content:"";
+position:fixed;
+width:400px;height:400px;
+background:#00ff9510;
+filter:blur(120px);
+bottom:-180px;left:-100px;
+pointer-events:none;
+}
+
+.container{
+max-width:680px;
+margin:auto;
+padding:25px 16px;
+position:relative;
+z-index:1;
+}
+
+header{
+display:flex;
+align-items:center;
+justify-content:space-between;
+margin-bottom:55px;
+}
+
+.brand{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.logo{
+width:48px;height:48px;
+display:grid;
+place-items:center;
+background:linear-gradient(135deg,#d7ff83,#8ed900);
+border-radius:15px;
+color:#101600;
+font-size:27px;
+font-weight:900;
+box-shadow:0 0 25px #b8ff3630;
+}
+
+.brand h2{
+font-size:22px;
+font-weight:900;
+}
+
+.brand span{color:var(--green)}
+
+.badge{
+font-size:11px;
+color:var(--green);
+border:1px solid var(--border);
+background:#b8ff3609;
+padding:8px 12px;
+border-radius:30px;
+}
+
+.hero{text-align:center;margin-bottom:35px}
+
+.hero .tag{
+color:var(--green);
+font-size:11px;
+letter-spacing:2px;
+font-weight:800;
+}
+
+.hero h1{
+font-size:clamp(30px,8vw,47px);
+font-weight:900;
+margin:10px 0;
+}
+
+.hero h1 span{
+color:var(--green);
+text-shadow:0 0 30px #b8ff3640;
+}
+
+.hero p{
+color:#888f88;
+font-size:13px;
+}
+
+.card{
+background:linear-gradient(145deg,#ffffff0b,#ffffff03);
+border:1px solid var(--border);
+border-radius:25px;
+padding:25px 22px;
+backdrop-filter:blur(20px);
+box-shadow:0 25px 80px #0006;
+}
+
+.card-header{
+display:flex;
+align-items:center;
+justify-content:space-between;
+margin-bottom:27px;
+}
+
+.card-header h3{
+font-size:17px;
+font-weight:800;
+}
+
+.card-header span{
+color:var(--green);
+font-size:22px;
+}
+
+.field{margin-bottom:21px}
+
+label{
+display:block;
+font-size:12px;
+color:#b8beb8;
+margin-bottom:9px;
+font-weight:700;
+}
+
+input,textarea{
+width:100%;
+background:#0006;
+border:1px solid #ffffff12;
+border-radius:13px;
+padding:15px;
+color:white;
+font-family:inherit;
+font-size:14px;
+outline:none;
+transition:.25s;
+}
+
+input:focus,textarea:focus{
+border-color:#b8ff3670;
+box-shadow:0 0 0 3px #b8ff360c;
+}
+
+input::placeholder,textarea::placeholder{color:#565d56}
+
+textarea{
+min-height:175px;
+resize:vertical;
+line-height:2;
+}
+
+.counter{
+text-align:left;
+color:#656b65;
+font-size:11px;
+margin-top:7px;
+}
+
+.send{
+width:100%;
+padding:17px;
+border:0;
+border-radius:14px;
+background:linear-gradient(120deg,#d3ff80,#a5ec22);
+color:#101600;
+font-family:inherit;
+font-size:15px;
+font-weight:900;
+cursor:pointer;
+transition:.25s;
+box-shadow:0 8px 30px #b8ff3615;
+}
+
+.send:active{transform:scale(.98)}
+
+.send:disabled{
+opacity:.5;
+cursor:not-allowed;
+}
+
+.result{
+display:none;
+margin-top:17px;
+padding:14px;
+border-radius:12px;
+text-align:center;
+font-size:13px;
+line-height:1.9;
+}
+
+.success{
+display:block;
+background:#b8ff3610;
+border:1px solid #b8ff3635;
+color:var(--green);
+}
+
+.error{
+display:block;
+background:#ff333310;
+border:1px solid #ff444440;
+color:#ff7777;
+}
+
+.footer{
+text-align:center;
+margin-top:30px;
+color:#626962;
+font-size:11px;
+line-height:2.2;
+}
+
+.footer strong{color:var(--green)}
+
+@media(max-width:480px){
+.container{padding:20px 13px}
+.card{padding:22px 16px}
+header{margin-bottom:43px}
+}
+</style></head><body><div class="container"><header>
+<div class="brand">
+<div class="logo">⚡</div>
+<h2>EZPRO <span>MAIL</span></h2>
+</div>
+<div class="badge">● سیستم ارسال ایمیل</div>
+</header><section class="hero">
+<div class="tag">NEXT GENERATION EMAIL SYSTEM</div>
+<h1>ارسال ایمیل <span>هوشمند</span></h1>
+<p>پیام خودت را بنویس و مستقیماً از ایمیل متصل‌شده ارسال کن.</p>
+</section><main class="card"><div class="card-header">
+<h3>ساخت و ارسال پیام</h3>
+<span>✉</span>
+</div><form id="emailForm"><div class="field">
+<label for="to_email">📩 آدرس ایمیل گیرنده</label>
+<input
+type="email"
+id="to_email"
+name="to_email"
+placeholder="example@gmail.com"
+required
+>
+</div><div class="field">
+<label for="subject">📝 موضوع ایمیل</label>
+<input
+type="text"
+id="subject"
+name="subject"
+placeholder="موضوع پیام..."
+maxlength="150"
+required
+>
+</div><div class="field">
+<label for="message">💬 متن پیام</label>
+<textarea
+id="message"
+name="message"
+placeholder="پیام خودت را اینجا بنویس..."
+maxlength="5000"
+required
+></textarea>
+<div class="counter">
+<span id="count">0</span> / 5000
+</div>
+</div><button class="send" id="sendBtn" type="submit">
+⚡ ارسال ایمیل
+</button><div class="result" id="result" role="status"></div></form>
+</main><footer class="footer">
+<strong>EZPRO MAIL ⚡</strong>
+<br>
+POWERED BY EMAILJS
+<br>
+ارسال پیام با سرعت و سادگی
+</footer></div><script>
+const EMAILJS_PUBLIC_KEY = "UtKLNP6HBzOCfB2Hd";
+const EMAILJS_SERVICE_ID = "service_673omet";
+const EMAILJS_TEMPLATE_ID = "template_mzg4r9s";
+
+emailjs.init({
+  publicKey: EMAILJS_PUBLIC_KEY
+});
+
+const form = document.getElementById("emailForm");
+const btn = document.getElementById("sendBtn");
+const result = document.getElementById("result");
+const message = document.getElementById("message");
+const count = document.getElementById("count");
+
+message.addEventListener("input",()=>{
+  count.textContent = message.value.length;
+});
+
+function showResult(text,type){
+  result.textContent = text;
+  result.className = "result " + type;
+}
+
+form.addEventListener("submit",async(event)=>{
+  event.preventDefault();
+
+  if(!form.reportValidity()) return;
+
+  btn.disabled = true;
+  btn.textContent = "⏳ در حال ارسال...";
+
+  result.style.display = "none";
+
+  try{
+    await emailjs.sendForm(
+      EMAILJS_SERVICE_ID,
+      EMAILJS_TEMPLATE_ID,
+      form
+    );
+
+    showResult(
+      "✅ ایمیل با موفقیت به سرویس ارسال شد!",
+      "success"
+    );
+
+    form.reset();
+    count.textContent = "0";
+
+  }catch(error){
+    console.error(error);
+
+    showResult(
+      "❌ ارسال ناموفق بود. تنظیمات قالب و اتصال Gmail را بررسی کن.",
+      "error"
+    );
+
+  }finally{
+    btn.disabled = false;
+    btn.textContent = "⚡ ارسال ایمیل";
+  }
+});
+</script></body>
+  </html>
